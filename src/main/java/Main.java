@@ -60,8 +60,13 @@ public class Main {
 
         // Print all students' names
         fuBerlinService.getAllGoodStudents().forEach(id -> System.out.println(students.getStudents().get(id).getName()));
+
+        // Average Grade course
         System.out.println(fuBerlinService.getAverageGradeOfCourse(course.getCourseId()));
+
         System.out.println(fuBerlinService.getAverageGradeOfCourse(englishCopy.getCourseId()));
+
+        // Average Grade University
         System.out.println(fuBerlinService.getAverageGradeOfUniversity());
 
     }
