@@ -35,10 +35,13 @@ public class Main {
 
         Course englishCopy = english.withGrades(Map.of(student.getStudentId(), Grade.GOOD, student4.getStudentId(), Grade.OKAY));
 
+        // create Courses for University
         Map<UUID, Course> coursesOfFuBerlin = new HashMap<>() {{
             put(course.getCourseId(), course);
             put(englishCopy.getCourseId(), englishCopy);
         }};
+
+        // create Map with all Students
         Map<UUID, Student> studentMap = new HashMap<>() {{
             put(student.getStudentId(), student);
             put(student1.getStudentId(), student1);
@@ -49,10 +52,13 @@ public class Main {
 
         StudentRepo students = new StudentRepo(studentMap);
 
+        // create University for Service
         University fuBerlin = new University(UUID.randomUUID(), "FU Berlin", coursesOfFuBerlin, students);
 
+        // create UniversityService
         UniversityService fuBerlinService = new UniversityService(fuBerlin);
 
+        // Print all students' names
         fuBerlinService.getAllGoodStudents().forEach(id -> System.out.println(students.getStudents().get(id).getName()));
         System.out.println(fuBerlinService.getAverageGradeOfCourse(course.getCourseId()));
         System.out.println(fuBerlinService.getAverageGradeOfCourse(englishCopy.getCourseId()));
