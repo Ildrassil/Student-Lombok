@@ -20,9 +20,7 @@ public class Main {
      Course course = new Course(UUID.randomUUID(), "Math", teacher, Map.of(student.getStudentId(), Grade.GOOD, student1.getStudentId(), Grade.GOOD, student2.getStudentId(), Grade.EXCELLENT, student3.getStudentId(), Grade.NOT_SO_OKAY));
 
         student2.setName("Christian");
-        System.out.println(student2.getName());
-        System.out.println(student3.getStudentId());
-        System.out.println(teacher.name());
+
 
         Student student4 = Student.builder()
                 .studentId(UUID.randomUUID())
@@ -43,13 +41,22 @@ public class Main {
             put(course.getCourseId(), course);
             put(englishCopy.getCourseId(), englishCopy);
         }};
+        Map<UUID,Student> studentMap = new HashMap<>(){{
+            put(student.getStudentId(), student);
+            put(student1.getStudentId(), student1);
+            put(student2.getStudentId(), student2);
+            put(student3.getStudentId(), student3);
+            put(student4.getStudentId(), student4);
+        }};
+        StudentRepo students = new StudentRepo(studentMap);
 
 
-        University fuBerlin = new University(UUID.randomUUID(), "FU Berlin", coursesOfFuBerlin);
+        University fuBerlin = new University(UUID.randomUUID(), "FU Berlin", coursesOfFuBerlin,students);
+
 
         UniversityService fuBerlinService = new UniversityService(fuBerlin);
 
-        System.out.println(fuBerlinService.getAllGoodStudents());
+        fuBerlinService.getAllGoodStudents().forEach(id -> System.out.println(students.getStudents().get(id).getName()));
 
     }
 }

@@ -9,6 +9,7 @@ import java.util.stream.Collectors;
 public class UniversityService {
     University university;
 
+
     public double getAverageGradeOfCourse(UUID courseId) {
         Course course = university.courses().get(courseId);
 
