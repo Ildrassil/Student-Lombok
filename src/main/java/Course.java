@@ -7,8 +7,8 @@ import java.util.UUID;
 @Builder
 @With
 public class Course {
-    UUID courseId;
-    String name;
-    Teacher teacher;
-    Map<UUID, Grade> grades;
+    private UUID courseId;
+    private String name;
+    private Teacher teacher;
+    private Map<UUID, Grade> grades;
 }

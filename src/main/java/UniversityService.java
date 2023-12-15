@@ -7,8 +7,7 @@ import java.util.stream.Collectors;
 @Data
 @AllArgsConstructor
 public class UniversityService {
-    University university;
-
+    private University university;
 
     public double getAverageGradeOfCourse(UUID courseId) {
         Course course = university.courses().get(courseId);
