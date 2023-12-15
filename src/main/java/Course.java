@@ -10,5 +10,5 @@ public class Course {
     UUID courseId;
     String name;
     Teacher teacher;
-    Map<UUID, Integer> grades;
+    Map<UUID, Grade> grades;
 }

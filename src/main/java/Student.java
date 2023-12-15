@@ -6,10 +6,7 @@ import java.util.UUID;
 @Builder
 @With
 public class Student {
-
-    UUID studentId;
-    String name;
-    String address;
-    int grade;
-
+    private UUID studentId;
+    private String name;
+    private String address;
 }
