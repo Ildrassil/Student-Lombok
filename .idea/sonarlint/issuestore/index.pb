@@ -20,3 +20,7 @@ G.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec,8/6/86
 -.idea/sonarlint/securityhotspotstore/index.pb,8/8/88a9255124c95bdc913197c120a8d560edc59c8e
 Å
 Q.idea/sonarlint/securityhotspotstore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec,2/c/2cabb939da04d3de3a200bf2b575690e1a16316d
+M
+src/main/java/University.java,a/f/aff8fb1ef9582a88ca32a300687848494a051d87
+T
+$src/main/java/UniversityService.java,6/7/67294dce4e759e9708f3438e32e5da5bedee5210
