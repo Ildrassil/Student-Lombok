@@ -54,5 +54,9 @@ public class Main {
         UniversityService fuBerlinService = new UniversityService(fuBerlin);
 
         fuBerlinService.getAllGoodStudents().forEach(id -> System.out.println(students.getStudents().get(id).getName()));
+        System.out.println(fuBerlinService.getAverageGradeOfCourse(course.getCourseId()));
+        System.out.println(fuBerlinService.getAverageGradeOfCourse(englishCopy.getCourseId()));
+        System.out.println(fuBerlinService.getAverageGradeOfUniversity());
+
     }
 }
