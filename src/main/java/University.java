@@ -5,6 +5,6 @@ public record University(
         UUID universityId,
         String name,
         Map<UUID, Course> courses,
-        StudentRepo students
+        StudentService studentService
 ) {
 }

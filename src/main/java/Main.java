@@ -49,11 +49,14 @@ public class Main {
             put(student3.getStudentId(), student3);
             put(student4.getStudentId(), student4);
         }};
-
+        // create A StudentRepo
         StudentRepo students = new StudentRepo(studentMap);
 
+        // creat a StudentService
+        StudentService sutdentService = new StudentService(students);
+
         // create University for Service
-        University fuBerlin = new University(UUID.randomUUID(), "FU Berlin", coursesOfFuBerlin, students);
+        University fuBerlin = new University(UUID.randomUUID(), "FU Berlin", coursesOfFuBerlin, sutdentService);
 
         // create UniversityService
         UniversityService fuBerlinService = new UniversityService(fuBerlin);
